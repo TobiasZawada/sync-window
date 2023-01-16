@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2013  Zawada
 
-;; Author: naehring <i@tn-home.de>
+;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: match, convenience
 
 ;; This program is free software; you can redistribute it and/or modify
