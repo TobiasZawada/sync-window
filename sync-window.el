@@ -24,6 +24,7 @@
 ;; The main function is sync-window-mode (which see).
 
 ;;; Code:
+(require 'cl-lib)
 
 (defface sync-window-face ;; originally copied from font-lock-function-name-face
   '((((class color) (min-colors 88) (background light)) (:foreground "Yellow" :background "Blue1"))
@@ -64,7 +65,7 @@
   (let ((master-win (selected-window))
 	(slave-win (and (bufferp sync-window-slave-buffer)
 		    (buffer-live-p sync-window-slave-buffer)
-		    (loop for w in (window-list)
+		    (cl-loop for w in (window-list)
 			  thereis (and (equal (window-buffer w) sync-window-slave-buffer)
 				       w)))))
     (when slave-win
@@ -94,6 +95,7 @@
 (defvar sync-window-mode-hook nil
   "Hooks to be run at start of `sync-window-mode'.")
 
+;;;###autoload
 (define-minor-mode sync-window-mode
   "Synchronized view of two buffers in two side-by-side windows."
   :group 'windows
