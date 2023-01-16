@@ -4,6 +4,9 @@
 
 ;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: match, convenience
+;; Package-Version: 1.0.1
+;; URL: https://github.com/TobiasZawada/sync-window
+;; Package-Requires: ((emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
